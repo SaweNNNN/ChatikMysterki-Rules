@@ -514,6 +514,20 @@ h1 span {
     color: #ff354d;
 }
 
+.punishment {
+    margin-top: 18px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255,255,255,.07);
+    color: #999;
+    font-family: "Roboto Condensed", Arial, sans-serif;
+    font-size: 14px;
+}
+
+.punishment strong {
+    color: #ff4355;
+    font-weight: 700;
+}
+
 /* EMPTY */
 
 .empty {
@@ -828,6 +842,11 @@ function renderRules(list) {
             <h3>${escapeHTML(rule.title)}</h3>
 
             <p>${escapeHTML(rule.text)}</p>
+
+            <div class="punishment">
+    <strong>Наказание:</strong>
+    ${escapeHTML(rule.punishment || "Не указано")}
+</div>
 
             <div class="rule-footer">
 
